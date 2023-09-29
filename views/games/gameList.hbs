@@ -3,13 +3,13 @@
 
     <div class="container gamelist">
 
-        <h1 style="color: orange;">¿Qué juego quieres buscar, {{loggedUser.username}}?</h1>
+        <h1>Empieza tu búsqueda {{loggedUser.username}}</h1>
 
         <form class="form-search content-search navbar-form" action="/games/search" method="post"
             style="margin-top: 20px;">
             <div class="input-group">
-                <input placeholder="Search Videogame" class="form-control form-text" type="text" size="15"
-                    maxlength="128" name="searchGame" />
+                <input placeholder="Escribe el título de un videojuego..." class="form-control form-text" type="text"
+                    size="15" maxlength="128" name="searchGame" />
             </div>
         </form>
 
@@ -22,14 +22,15 @@
                         <div class="card-body">
                             <h5 class="card-title">{{name}}</h5>
 
-                            <label for="paltforms"></label>
-                            <select name="platforms" id="platforms">
+                            <label for="platforms" class="form-label">Plataformas disponibles:</label>
+                            <select class="form-select" name="platforms" id="platforms">
                                 {{#each platforms}}
                                 <option>{{platform.name}}</option>
                                 {{/each}}
                             </select>
+                            <br>
 
-                            <a href="/games/{{id}}/details" class="btn btn-dark">Details</a>
+                            <a href="/games/{{id}}/details" class="btn btn-dark">Detalles</a>
                         </div>
                     </div>
                 </div>

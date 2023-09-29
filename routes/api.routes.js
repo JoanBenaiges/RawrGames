@@ -8,7 +8,7 @@ router.get("/events", (req, res, next) => {
     Event
         .find()
         .then(events => res.json(events))
-        .catch(err => res.status(500).json('Server error')) //no renderizar el error de un json
+        .catch(err => res.status(500).json('Server error'))
 })
 
 module.exports = router

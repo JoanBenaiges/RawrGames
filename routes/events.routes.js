@@ -22,7 +22,7 @@ router.get("/", isLoggedIn, (req, res, next) => {
 });
 
 //Create
-router.get("/create", isLoggedIn, checkRoles('ADMIN', 'ME'), (req, res) => {
+router.get("/create", isLoggedIn, (req, res) => {
     res.render("events/createEvents")
 })
 

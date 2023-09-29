@@ -13,7 +13,7 @@ class GamesApiHandler {
         })
     }
 
-    getAllGames(page = 1) {
+    getAllGames(page = Math.floor(Math.random() * 50) + 1) {
 
         return this.axiosApp.get(`/games`, { params: { page } })
     }
@@ -23,19 +23,9 @@ class GamesApiHandler {
         return this.axiosApp.get(`/games?search=${searchGame}`)
     }
 
-    searchGamesForGenre(searchGenre) {
-
-        return this.axiosApp.get(`/genres?search=${searchGenre}`)
-    }
-
     getOneGame(id) {
 
         return this.axiosApp.get(`/games/${id}`)
-    }
-
-    getGameTrailer(id) {
-
-        return this.axiosApp.get(`/games/${id}/movies`)
     }
 
 }

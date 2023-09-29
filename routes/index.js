@@ -11,9 +11,6 @@ module.exports = app => {
     const eventsRoutes = require("./events.routes")
     app.use("/events", eventsRoutes)
 
-    const forumRoutes = require("./forum.routes")
-    app.use("/forum", forumRoutes)
-
     const authRoutes = require("./auth.routes")
     app.use("/auth", authRoutes)
 

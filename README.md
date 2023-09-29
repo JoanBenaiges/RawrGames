@@ -1,4 +1,4 @@
-# PROYECYO-2-ALEX-JOAN
+# Project2
 
 | HTTP | Routes           | Description                      | JSON               |
 |:----:|------------------|----------------------------------|--------------------|

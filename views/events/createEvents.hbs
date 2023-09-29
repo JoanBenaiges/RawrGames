@@ -1,0 +1,85 @@
+<style>
+    body {
+
+        background-color: black;
+        background-repeat: no-repeat;
+        ;
+    }
+</style>
+
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center" style="color: orange;">
+        <div class="col-md-6">
+
+            <h1
+                style=" background-color:rgb(249, 151, 4);margin-left:20px; margin-right:400px; color:rgb(0, 0, 0); padding:5px; border-radius:5px">
+                New
+                Event</h1>
+            <hr>
+            <form action="/events/create" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="eventName" class="form-label">Name: </label>
+                            <input type="text" class="form-control" id="eventName" name="eventName">
+                        </div>
+                    </div>
+                    <label for="paltforms">Platform
+                        <select type="text" id="platforms" name="platform" style="">
+                            <option value="PlayStation 5">Playstation 5</option>
+                            <optionn value="Xbox Series S/X">Xbox Series S/X</option>
+                                <option value="PlayStation 4">PlayStation 4</option>
+                                <option value="PC">PC</option>
+                                <option value="PlayStation 3">Playstation 3</option>
+                                <option value="Xbox 360">Xbox 360</option>
+                                <option value="Xbox One">Xbox One</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="">
+                    <div class="mb-3">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" name="city">
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="description" name="description">
+                        </div>
+                        <div class="col">
+                            <h6> Please introduce the coordinates of the place:</h6>
+                            <div class="mb-4">
+                                <label>Latitud
+                                    <input name="latitude" type="text">
+                                </label>
+
+                                <label>Longitud
+                                    <input name="longitude" type="text">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mb-3">
+                    <label for="eventDate" class="form-label">Date</label>
+                    <input type="datetime-local" id="eventDate" name="eventDate">
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="eventImg" class="form-label">Upload an image</label>
+                        <input type="file" placeholder="form-control" id="eventImg" name="eventImg">
+                    </div>
+                </div>
+
+                <div class="d-grid mt-3">
+                    <button type="submit" class="btn btn-dark btn-lg"
+                        style="color:rgb(0, 0, 0); background-color:orange; max-width:200px">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

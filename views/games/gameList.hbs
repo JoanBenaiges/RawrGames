@@ -1,0 +1,41 @@
+<body>
+
+
+    <div class="container gamelist">
+
+        <h1 style="color: orange;">¿Qué juego quieres buscar, {{loggedUser.username}}?</h1>
+
+        <form class="form-search content-search navbar-form" action="/games/search" method="post"
+            style="margin-top: 20px;">
+            <div class="input-group">
+                <input placeholder="Search Videogame" class="form-control form-text" type="text" size="15"
+                    maxlength="128" name="searchGame" />
+            </div>
+        </form>
+
+        <div class="container bg-transparent">
+            <div class="row">
+                {{#each games}}
+                <div class="col-4 mt-4">
+                    <div class="card gamesCards">
+                        <img src="{{background_image}}" class="card-img-top" alt="game-image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{name}}</h5>
+
+                            <label for="paltforms"></label>
+                            <select name="platforms" id="platforms">
+                                {{#each platforms}}
+                                <option>{{platform.name}}</option>
+                                {{/each}}
+                            </select>
+
+                            <a href="/games/{{id}}/details" class="btn btn-dark">Details</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <br>
+</body>

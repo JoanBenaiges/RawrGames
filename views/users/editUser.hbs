@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-8">
+
+            <h1>Editar {{username}}</h1>
+
+            <hr>
+
+            <form action="/users/edit/{{_id}}" method="POST">
+
+                <div class="mb-3">
+                    <label for="field1" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="field1" name="username" value="{{username}}">
+                </div>
+                <div class="mb-3">
+                    <label for="field2" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="field2" name="email" value="{{email}}">
+                </div>
+                <div class="mb-3">
+                    <label for="field3" class="form-label">Nickname</label>
+                    <input type="text" class="form-control" id="field3" name="nickname" value="{{nickname}}">
+                </div>
+                <div class="mb-3">
+                    <label for="field4" class="form-label">About Me</label>
+                    <input type="text" class="form-control" id="field4" name="aboutMe" value="{{aboutMe}}">
+                </div>
+
+                <input type="text" name="user_id" hidden value="{{_id}}">
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

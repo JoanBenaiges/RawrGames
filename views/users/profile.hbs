@@ -1,0 +1,44 @@
+<body>
+    <div class="card mb-3" style="width: 900px; height:350px; margin-left:300px; margin-top:70px">
+        <h1>My Profile: @{{user.username}}</h1>
+        <hr>
+        <div class="row">
+
+            <div class="col-md-4">
+                <img src="{{user.avatarImg}}" alt="avatarImage"
+                    style="margin-left:40px;border-radius:50%;margin-top:20px; height:300px; width:300px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                </div>
+                <div class="card-body" style="margin-left:80px">
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Username:</strong> {{user.username}}</li>
+                        <li class="list-group-item"><strong>Email:</strong> {{user.email}}</li>
+                        <li class="list-group-item"><strong>Nickname:</strong> {{user.nickname}}</li>
+                        <li class="list-group-item"><strong>About me:</strong> {{user.aboutMe}}</li>
+                    </ul>
+                </div>
+                <div class="mb-4" style="margin-left:190px; margin-top:10px">
+
+                    {{#if userRoles.isAdmin}}
+                    <form action="/users/delete/{{user._id}}" method="POST" class="d-inline">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                    {{/if}}
+
+                    <a href="/users/edit/{{user._id}}" class="btn btn-dark ">Edit</a>
+
+                    <a href="/users/userlist" class="btn btn-warning">Return to Community</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+</body>

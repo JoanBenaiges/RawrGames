@@ -1,0 +1,258 @@
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+#myMap {
+  height: 90vh;
+
+}
+
+/*********** lAYOUT ************/
+
+.avatarImg {
+
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 20px;
+  max-width: 35px;
+  max-height: 30px
+}
+
+.UserNamePosition {
+
+  margin-left: 800px;
+}
+
+
+.pageLogo {
+
+  height: 40px;
+  margin-left: 10px
+}
+
+
+/************** INDEX **********/
+
+.inicio img {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 250px;
+  border-radius: 10px;
+
+  animation-name: parpadeo;
+  animation-duration: 1.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 1.7s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes parpadeo {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0;
+  margin-left: 200px;
+  position: relative;
+}
+
+.body-inicio {
+
+  background-color: black;
+}
+
+.body-inicio video {
+
+  margin-left: 100px;
+}
+
+
+
+/************** USERS PROFILE ************/
+
+.profileCard {
+
+  width: 900px;
+  height: 350px;
+  margin-left: 300px;
+  margin-top: 70px
+}
+
+.profileImage {
+
+  margin-left: 40px;
+  border-radius: 50%;
+  margin-top: 20px;
+  height: 300px;
+  width: 300px
+}
+
+.listProfile {
+
+  margin-left: 80px
+}
+
+.linksProfile {
+
+  margin-left: 190px;
+  margin-top: 10px
+}
+
+/************ EDIT USER ************/
+
+
+
+
+
+/*********** GAME LIST ************/
+
+.gamelist h1 {
+
+  margin-top: -30px;
+}
+
+.gamesCards {
+
+  width: 370px;
+  height: 290px
+}
+
+.gamesCards img {
+
+  width: 370px;
+  height: 180px
+}
+
+.gamesCards select {
+
+  margin-top: 10px
+}
+
+.gamesCards a {
+
+  margin-left: 80px;
+
+}
+
+.navbarPage {
+
+  margin-left: 600px;
+  margin-top: 30px
+}
+
+.gameDetails h2 {
+
+  background-color: black;
+  color: orange;
+  padding: 10px
+}
+
+.gamedetailsImage img {
+
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+
+}
+
+/************ CREATE COMMENTS **************/
+
+.createNewComment {
+
+  background-color: black;
+  color: orange;
+
+}
+
+
+.formComment h1 {
+
+  background-color: black;
+  margin-right: 350px;
+  color: orange;
+  padding: 5px;
+  border-radius: 5px
+}
+
+/********** COMMENT LIST *******/
+
+.commentList {
+
+  background-color: black;
+  color: orange;
+}
+
+/***************** USER LIST ************/
+
+
+.titleList a {
+
+  margin-left: 800px
+}
+
+
+.userList-2 {
+
+  background-color: black;
+
+}
+
+/******** EVENT LIST ***********/
+
+
+.error {
+  margin-top: -100px;
+  height: 100vh;
+  width: 1000px;
+  margin-left: 220px;
+  background-image: url('../images/ibroke.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}

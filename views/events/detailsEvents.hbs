@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ event.eventImg }}" class="img-fluid rounded-start" alt="{{ event.eventName }} Image">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title">{{ event.eventName }}</h2>
+                    <p class="card-text">{{ event.description }}</p>
+                    <p class="card-text">{{ event.formattedDate }}</p>
+                    <p class="card-text"><strong>Platform:</strong> {{ event.platform }}</p>
+                    <p class="card-text"><strong>City:</strong> {{ event.city }}</p>
+
+                    <h3 class="mt-4">Attendees</h3>
+                    <ul class="list-group">
+                        {{#each event.attendees}}
+                        <li class="list-group-item"><strong>{{username}}</strong> a.k.a. <strong>{{nickname}}</strong>
+                        </li>
+                        {{/each}}
+                    </ul>
+
+                    {{#unless userIsAttendingEvent}}
+                    <form action="/events/attend/{{event._id}}" method="post">
+                        <input type="submit" value="Inscribirse" class="btn btn-success mt-3">
+                    </form>
+                    {{/unless}}
+
+                    {{#unless userIsAttendingEvent}}
+                    <form action="/events/withdraw/{{event._id}}" method="post">
+                        <input type="submit" value="Borrarse" class="btn btn-danger mt-3">
+                    </form>
+                    {{/unless}}
+
+                    <div class="text mt-3">
+                        {{#if userRoles.isAdmin}}
+                        <a href="/events/edit/{{event._id}}" class="btn btn-warning">Editar</a>
+                        {{/if}}
+                        {{#if userRoles.isME}}
+                        <a href="/events/edit/{{event._id}}" class="btn btn-warning">Editar</a>
+                        {{/if}}
+                        <a href="/events" class="btn btn-dark mb-3">Return</a>
+                        <a href="/" class="btn btn-dark mb-3">Home Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

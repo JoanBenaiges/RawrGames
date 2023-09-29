@@ -1,0 +1,55 @@
+<body style="background-color: black;">
+
+    <div class="container gameDetails">
+        <h2 class="card-title" style="display:inline-table; margin-top:-60px">{{game.name}}</h2>
+        <div class="card">
+            <div class="gamedetailsImage">
+                <img src="{{game.background_image}}" alt="gameImage">
+            </div>
+
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-8">
+                        <details>
+                            <summary>Description</summary>
+                            <p>{{{game.description}}}</p>
+                        </details>
+                    </div>
+                    <div class="col-1">
+                        <a href="/games/{{game.id}}/trailers" class="btn btn-dark"
+                            style="margin-left:300px; margin-top:-10px">Trailer</a>
+                    </div>
+                    <div class="col-1">
+                        <details>
+                            <summary> Platforms </summary>
+                            {{#each game.platforms}}
+
+                            <ul>
+                                <li>
+                                    <option>{{platform.name}}</option>
+                                </li>
+                            </ul>
+
+                            {{/each}}
+                        </details>
+                    </div>
+                    <div class="col-1">
+                        <details>
+                            <summary> Genres </summary>
+                            {{#each game.genres}}
+
+                            <ul>
+                                <li>
+                                    <option>{{name}}</option>
+                                </li>
+                            </ul>
+
+                            {{/each}}
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

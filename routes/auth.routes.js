@@ -53,7 +53,7 @@ router.post('/login', isLoggedOut, (req, res, next) => {
             }
 
             req.session.currentUser = foundUser
-            res.redirect('/games')
+            res.redirect('/events')
         })
         .catch(err => next(err))
 })

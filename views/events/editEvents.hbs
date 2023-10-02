@@ -11,26 +11,26 @@
             <form action="/events/edit/{{_id}}" method="POST">
 
                 <div class="mb-3">
-                    <label for="field1" class="form-label">Name</label>
+                    <label for="field1" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="field1" name="eventName" value="{{eventName}}">
                 </div>
 
                 <div class="mb-3">
-                    <label for="field2" class="form-label">Description</label>
+                    <label for="field2" class="form-label">Descripción</label>
                     <input type="text" class="form-control" id="field2" name="description" value="{{description}}">
                 </div>
 
                 <div class="mb-3">
-                    <label for="field3" class="form-label">Latitude</label>
+                    <label for="field3" class="form-label">Latitud</label>
                     <input type="text" class="form-control" id="field3" name="latitude"
                         value="{{location.coordinates.[0]}}">
-                    <label for="field4" class="form-label">Longitude</label>
+                    <label for="field4" class="form-label">Longitud</label>
                     <input type="text" class="form-control" id="field4" name="longitude"
                         value="{{location.coordinates.[1]}}">
                 </div>
 
 
-                <input type="text" name="user_id" hidden value="{{_id}}">
+                <input type="text" name="user_id" value="{{_id}}">
 
                 <div class="d-grid">
                     <button type="submit" class="btn btn-dark">Guardar</button>

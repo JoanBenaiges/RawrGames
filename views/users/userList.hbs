@@ -1,22 +1,30 @@
-<body class="userList">
-    <div class="container userList-1">
+<body>
 
+    <div class="container">
         <h1>Nuestra comunidad</h1>
         <a href="/" class="btn btn-dark">Volver a inicio</a>
-
         <hr>
-        <ol class="list-group userList-2">
-            {{#each users}}
-            <li class="list-group-item d-flex justify-content-between align-items-start bg-transparent">
-                <img src="{{avatarImg}}" alt="" style="width: 100px;height:100px;border-radius:50%; margin-right:15px">
-                <div class="ms-2 me-auto" style="font-size:25px;">
-                    <div class="fw-bold mb-3">{{username}}</div>
-                    <a href="/users/details/{{_id}}" class="btn btn-warning">Ver detalles</a>
-            </li>
 
-            <hr>
+        <div class="row">
+            {{#each users}}
+            <div class="col-md-4 mb-4">
+                <div class="card bg-transparent">
+                    <div class="d-flex align-items-center">
+                        <img src="{{avatarImg}}" alt=""
+                            style="width: 100px; height: 100px; border-radius: 50%; margin: 15px;" class="card-img-top">
+                        <div>
+                            <h5 class="card-title fw-bold mb-3">{{username}}</h5>
+                            <h6 class="card-title fw-bold mb-3">{{nickname}}</h6>
+                        </div>
+                    </div>
+                    <div class="card-body" style="font-size: 25px;">
+                        <a href="/users/details/{{_id}}" class="btn btn-dark">Perfil</a>
+                    </div>
+                </div>
+            </div>
             {{/each}}
-        </ol>
+        </div>
+
         <hr>
     </div>
 </body>

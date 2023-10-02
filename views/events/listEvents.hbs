@@ -1,56 +1,24 @@
-<body class="listEvents">
+<body>
 
     <div class="container">
-        <div class="row">
-            <h1 style="margin-bottom:20px;margin-left:40px;">Events</h1>
-            <hr>
-            {{#if userRoles.isAdmin}}
-            <div class="col-6">
-                <a href="/events/create" class="btn btn-dark"
-                    style="margin-left:auto:px; margin-bottom:10px; color:rgb(255, 175, 27)">New
-                    event</a>
-                {{/if}}
-                {{#if userRoles.isME}}
-                <div class="col-6">
-                    <a href="/events/create" class="btn btn-dark mb-2" style="color:rgb(255, 175, 27);">New
-                        event</a>
-                    {{/if}}
-                    <a href="/maps" class="btn btn-dark mb-2 " style="color:rgb(255, 175, 27)">View in Maps</a>
-                </div>
-            </div>
-        </div>
-        {{#each events }}
+        <h1>Eventos</h1>
+        <a href="/events/create" class="btn btn-dark" style="margin-bot: 5px">Nuevo Evento</a>
+        <a href=" /maps" class="btn btn-dark">Ver en el mapa</a>
+        <hr>
 
-        <div class="card mt-3 mb-4 bg-transparent" style="max-width: 1200px; margin-left:120px">
+        {{#each events }}
+        <div class="card mt-3 mb-4 bg-transparent" style="max-width: 100%;">
             <div class="row g-0">
                 <div class="col-md-4 bg-transparent">
-                    <img src="{{eventImg}}" class="img-fluid rounded-start" alt="..." style="max-width: 220px;">
+                    <img src="{{eventImg}}" class="img-fluid rounded-start" alt="Event Image" style="max-width: 100%;">
                 </div>
                 <div class="col-md-8">
-                    <div class="card-body" style="margin-top:20px margin-left:20px">
-                        <h5 class="card-title">Event Name: {{eventName}}</h5>
-                        <p class="card-text">Description: {{description}}</p>
-                        <label for="paltforms">
-                            <select type="text" id="platforms" name="platform">
-                                <option value="PlayStation 5">Playstation 5</option>
-                                <optionn value="Xbox Series S/X">Xbox Series S/X</option>
-                                    <option value="PlayStation 4">PlayStation 4</option>
-                                    <option value="PC">PC</option>
-                                    <option value="PlayStation 3">Playstation 3</option>
-                                    <option value="Xbox 360">Xbox 360</option>
-                                    <option value="Xbox One">Xbox One</option>
-                        </label>
-                        </select>
-
-                        <a href="/events/details/{{_id}}" class="btn btn-dark"
-                            style="margin-left: 550px;margin-top:50px">Details</a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{eventName}}</h5>
+                        <p class="card-text">Descripción: {{description}}</p>
+                        <a href="/events/details/{{_id}}" class="btn btn-dark">Detalles</a>
 
                         {{#if userRoles.isAdmin}}
-                        <form action="/events/delete/{{_id}}" method="POST">
-                            <input type="submit" value="Delete">
-                        </form>
-                        {{/if}}
-                        {{#if userRoles.isME}}
                         <form action="/events/delete/{{_id}}" method="POST">
                             <input type="submit" value="Delete">
                         </form>
@@ -59,9 +27,8 @@
                 </div>
             </div>
         </div>
-        <hr>
         {{/each}}
-
     </div>
+
 
 </body>

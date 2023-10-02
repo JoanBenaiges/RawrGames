@@ -1,17 +1,14 @@
 <body>
-    <div class="card mb-3" style="width: 900px; height:350px; margin-left:300px; margin-top:70px">
-        <h1>{{user.username}}</h1>
-        <hr>
-        <div class="row">
-
+    <div class="card mb-3" style="width: 50%; margin: 70px auto;">
+        <div class="row g-0">
             <div class="col-md-4">
-                <img src="{{user.avatarImg}}" alt="avatarImage"
-                    style="margin-left:40px;border-radius:50%;margin-top:20px; height:300px; width:300px">
+                <img src="{{user.avatarImg}}" alt="Avatar"
+                    style="border-radius: 50%; width: 300px; height: 300px; margin: 20px auto; margin-left: 10px">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                </div>
-                <div class="card-body" style="margin-left:80px">
+                    <h1 class="card-title">{{user.username}}</h1>
+                    <hr>
                     <ul class="list-group">
                         <li class="list-group-item"><strong>Nombre de usuario:</strong> {{user.username}}</li>
                         <li class="list-group-item"><strong>Email:</strong> {{user.email}}</li>
@@ -19,18 +16,12 @@
                         <li class="list-group-item"><strong>Sobre mi:</strong> {{user.aboutMe}}</li>
                     </ul>
                 </div>
-                <div class="mb-4" style="margin-left:190px; margin-top:10px">
-
-                    {{#if userRoles.isAdmin}}
+                <div class="card-body text-center">
                     <form action="/users/delete/{{user._id}}" method="POST" class="d-inline">
-                        <input type="submit" value="Delete" class="btn btn-danger">
+                        <input type="submit" value="Eliminar" class="btn btn-danger">
                     </form>
-                    {{/if}}
-
-                    <a href="/users/edit/{{user._id}}" class="btn btn-dark ">Editar</a>
-
-                    <a href="/users/userlist" class="btn btn-warning">Volver</a>
-
+                    <a href="/users/edit/{{user._id}}" class="btn btn-warning ml-2">Editar</a>
+                    <a href="/users/userlist" class="btn btn-secondary ml-2">Volver</a>
                 </div>
             </div>
         </div>

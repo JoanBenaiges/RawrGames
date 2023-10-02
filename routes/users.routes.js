@@ -5,7 +5,8 @@ const User = require("../models/User.model");
 
 
 //Go to user list
-router.get('/userlist', isLoggedIn, (req, res) => {
+router.get('/userlist', isLoggedIn, (req, res, next) => {
+    
 
     User
         .find()

@@ -14,15 +14,15 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <img src="../../public/images/joysticklogo.png" alt="">
-            <h1>LOG IN</h1>
+            <h1>Acceder</h1>
             <hr>
             <form action="/auth/login" method="POST">
                 <div class="mb-3">
-                    <label value="example@email.com" ; for="email" class="form-label">Email</label>
+                    <label value="example@email.com" ; for="email" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
+                    <label for="password" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
 
@@ -31,9 +31,8 @@
                 {{/if}}
                 <div class="row" style="">
                     <div class="col-6">
-                        <button id="audio" type="submit" class="btn btn-dark">Log
-                            In</button>
-                        <a href="/auth/register" class="btn btn-warning">Register</a>
+                        <button id="audio" type="submit" class="btn btn-dark">Acceder</button>
+                        <a href="/auth/register" class="btn btn-dark">Registrarse</a>
                     </div>
                 </div>
 

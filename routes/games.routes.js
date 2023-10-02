@@ -5,6 +5,7 @@ const gamesApi = require('../services/games.api');
 router.get("/", (req, res, next) => {
 
     const page = req.query.page
+
     gamesApi
         .getAllGames(page)
         .then(response => res.render('games/gameList', { games: response.data.results, loggedUser: req.session.currentUser, page }))
@@ -23,11 +24,9 @@ router.post("/search", (req, res, next) => {
 
 })
 
-
 router.get('/:id/details', (req, res, next) => {
 
     const { id } = req.params
-
 
     gamesApi
 

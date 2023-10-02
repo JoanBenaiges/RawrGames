@@ -7,7 +7,6 @@ const User = require("../models/User.model");
 //Go to user list
 router.get('/userlist', isLoggedIn, (req, res, next) => {
     
-
     User
         .find()
         .then(users => res.render('users/userList', { users }))
@@ -17,7 +16,6 @@ router.get('/userlist', isLoggedIn, (req, res, next) => {
 
 //View profile
 router.get('/details/:user_id', isLoggedIn, (req, res) => {
-
 
     const userRoles = {
         isAdmin: req.session.currentUser?.role === 'ADMIN',
@@ -73,7 +71,6 @@ router.post('/edit/:user_id', isLoggedIn, (req, res) => {
 
 
 //Delete user
-
 router.post("/delete/:user_id", isLoggedIn, checkRoles('ADMIN'), (req, res) => {
 
     const { user_id } = req.params
